@@ -1,4 +1,4 @@
-# JavaFX Basketball Season Simulator
+# 🏀 JavaFX Basketball Season Simulator
 
 A JavaFX desktop application designed to simulate a basketball season, allowing users to manage teams, update player statistics, and organize tournament rounds. The program features an automated game simulation system that calculates match results based on team metrics and tracks standings throughout the season.
 
