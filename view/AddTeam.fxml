@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>	
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.*?> 
+<?import javafx.geometry.*?>
+
+<VBox fx:controller="controller.AddTeamController" styleClass="background" 
+    prefHeight="400.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+    
+    <padding>
+        <Insets top="120" bottom="20" left="20" right="20"/>
+    </padding>
+
+    <HBox alignment="CENTER">
+        <VBox alignment="TOP_LEFT">
+
+        <Label text="Team Details" styleClass="label-h2"/>
+
+        <HBox>
+            <Label text="Name:" styleClass="label-opac" prefWidth="150"/>
+            <TextField fx:id="teamNameField"/>
+        </HBox>
+
+        </VBox>
+    </HBox>
+
+    <HBox alignment="CENTER">
+        <Button text="Add" fx:id="addButton" onAction="#addTeam"/>
+    </HBox>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

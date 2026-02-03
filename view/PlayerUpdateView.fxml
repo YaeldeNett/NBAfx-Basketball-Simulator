@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>	
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.*?> 
+<?import javafx.geometry.*?>
+
+<VBox fx:controller="controller.PlayerUpdateController" spacing="20" alignment="CENTER" styleClass="background" 
+    prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1">
+
+    <padding>
+        <Insets top="10" bottom="10" left="5" right="5" />
+    </padding>
+    
+    <VBox alignment="CENTER">
+        <Label text="Player Details                              " styleClass="label-h2"/>
+    </VBox>
+
+    <HBox alignment="CENTER" spacing="20">
+        <VBox alignment="CENTER_LEFT" spacing="8">
+            <Label text="Player Name:" styleClass="label-opac"/>
+            <Label text="Player Credit:" styleClass="label-opac"/>
+            <Label text="Player Age:" styleClass="label-opac"/>
+            <Label text="Player No:" styleClass="label-opac"/>
+        </VBox>
+
+        <VBox alignment="CENTER_LEFT" spacing="15">
+            <TextField fx:id="playerNameField" prefWidth="250"/>
+            <TextField fx:id="playerCreditField" prefWidth="250"/>
+            <TextField fx:id="playerAgeField" prefWidth="250"/>
+            <TextField fx:id="playerNoField" prefWidth="250"/>
+        </VBox>
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Button fx:id="updateButton" text="Update" HBox.hgrow="NEVER" onAction="#updatePlayer" />
+        <Button fx:id="addButton" text="Add" HBox.hgrow="NEVER" onAction="#addPlayer"/>
+        <Button fx:id="closeButton" text="Close" HBox.hgrow="NEVER" onAction="#closeWindow" />
+    </HBox>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
+

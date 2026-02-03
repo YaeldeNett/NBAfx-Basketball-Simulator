@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<VBox fx:controller="controller.TeamsController" alignment="CENTER" styleClass="background"
+    prefHeight="550.0" prefWidth="750.0"    xmlns:fx="http://javafx.com/fxml/1">
+   
+   <Label text="All Teams" styleClass="label-h2"/>
+
+    <TableView fx:id="teamsTV">
+        <columns>
+            <TableColumn text="Team Name" prefWidth="180.0">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Number Of Players" prefWidth="180.0">
+                <cellValueFactory>
+                    <PropertyValueFactory property="countPlayer"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Average Player Credit" prefWidth="180.0">
+                <cellValueFactory>
+                    <PropertyValueFactory property="countAvgCredit"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Average Age" prefWidth="180.0">
+                <cellValueFactory>
+                    <PropertyValueFactory property="countAvgAge"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <HBox styleClass="hbox-style" spacing="10" >
+        <padding>
+            <Insets top="15" bottom="10" left="10" right="10"/>
+        </padding>
+
+        <Button  fx:id="addButton" text="Add" HBox.hgrow="NEVER" onAction="#addTeam"/>
+        <Button  fx:id="manageButton" text="Manage" HBox.hgrow="NEVER" disable="true" onAction="#manageTeam"/>
+        <Button  fx:id="deleteButton" text="Delete" HBox.hgrow="NEVER" disable="true" onAction="#deleteTeam"/>
+        <Button  fx:id="closeButton" text="Close" HBox.hgrow="NEVER" onAction="#close"/>
+    </HBox>
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
